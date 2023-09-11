@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter } from 'react-router-dom';
+import './App.scss';
+import IndexRoute from './routes';
+import CommonHeader from './components/CommonHeader/CommonHeader';
+import CommonFooter from './components/CommonFooter';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getConfig } from './actions/catalogueAction';
 
 function App() {
+  const dispatch=useDispatch();
+  useEffect(() => {
+    dispatch(getConfig());
+  },[]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <CommonHeader />
+        <IndexRoute />
+        <CommonFooter />
+      </BrowserRouter>
     </div>
   );
 }
