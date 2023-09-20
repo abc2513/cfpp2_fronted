@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import * as PIXI from 'pixi.js';
 import * as filters from 'pixi-filters';
+import addRandomScaleAnimate from './utils/addRandomScaleAnimate';
+import addRoateAnimate from './utils/addRoateAnimate';
 
 const app = new PIXI.Application({
   width: 1440,
@@ -13,7 +15,7 @@ const app = new PIXI.Application({
 const container = new PIXI.Container();
 app.stage.addChild(container);
 
-container.y=-170;
+container.y = -170;
 
 //创造一个渐变颜色图案的背景
 
@@ -24,9 +26,9 @@ const reflectionFilter = new filters.ReflectionFilter({
   mirror: true,
   animating: true,
   boundary: 0.9,
-  amplitude: [0,20],
-  waveLength: [60,100],
-  alpha: [0.4,0.9],
+  amplitude: [0, 20],
+  waveLength: [70, 100],
+  alpha: [0.4, 0.9],
 });
 app.stage.filters = [reflectionFilter];
 //开启反射滤镜动画
@@ -46,6 +48,9 @@ function getAssetsObject(name, url, x, y, anchor) {
   };
 }
 const assetsList = [
+
+
+
   //黄色和白色太阳
   {
     name: 'whiteSun',
@@ -54,33 +59,114 @@ const assetsList = [
     y: 10,
     afterFunction: (sprite) => {
       //旋转动画
-      sprite.anchor.set(0.5);
-      sprite.x+=sprite.width/2;
-      sprite.y+=sprite.height/2;
-      app.ticker.add(() => {
-        sprite.rotation += 0.0012;
-      });
-
+      addRoateAnimate(sprite, app, 0.002);
+      addRandomScaleAnimate(sprite, app, 0.0003, 0, 0.0001, 0.012);
     },
   },
   {
     name: 'yellowSun',
     url: './assets/yellow_sun.svg',
+    x: 877,
+    y: -13 + 50,
+    afterFunction: (sprite) => {
+      //使svg内id为small_sun的元素旋转
+      console.log(sprite);
+    }
+  },
+  {
+    name: 'largeCircle',
+    url: './assets/circle_large.svg',
     x: 409,
-    y: -1,
+    y: -107 + 50,
+    afterFunction: (sprite) => {
+      addRoateAnimate(sprite, app, 0.0012);
+
+    },
+  },
+  {
+    name: 'smallCircle',
+    url: './assets/circle_small.svg',
+    x: 1128,
+    y: 62 + 50,
+    afterFunction: (sprite) => {
+      addRoateAnimate(sprite, app, 0.01);
+
+    },
   },
 
-  
+  //鱼群
+  {
+    name: 'fish_group_1',
+    url: './assets/fish_group_1.png',
+    x: 176,
+    y: 135,
+    afterFunction: (sprite) => {
+      addRoateAnimate(sprite, app, -0.001);
+    }
+  },
+  {
+    name: 'fish_group_2',
+    url: './assets/fish_group_2.png',
+    x: 143,
+    y: 117,
+    afterFunction: (sprite) => {
+      addRoateAnimate(sprite, app, -0.0015);
+    }
+  },
+  {
+    name: 'fish_group_3',
+    url: './assets/fish_group_3.png',
+    x: 275,
+    y: 153,
+    afterFunction: (sprite) => {
+      addRoateAnimate(sprite, app, -0.0019);
+    }
+  },
+
   //山
-  getAssetsObject('mountain_0', './assets/mountain_0.png',0,720,0),
-  getAssetsObject('mountain_1', './assets/mountain_1.png',823,749,0),
-  
+  getAssetsObject('mountain_0', './assets/mountain_0.png', 0, 720, 0),
+  getAssetsObject('mountain_1', './assets/mountain_1.png', 823, 749, 0),
+
   //云朵
-  getAssetsObject('cloud_0', './assets/cloud_0.png',0, 552,0),
-  getAssetsObject('cloud_1', './assets/cloud_3.png', 1000,654,0),
-  getAssetsObject('cloud_2', './assets/cloud_2.png', 428,880,0),
-  getAssetsObject('cloud_3', './assets/cloud_1.png',118,772,0),
-  getAssetsObject('cloud_4', './assets/cloud_4.png', 524,903,0),
+
+  {
+    name: 'cloud_3',
+    url: './assets/cloud_3.png',//右边、长
+    x: 1010,
+    y: 680,
+    afterFunction: (sprite) => {
+      addRandomScaleAnimate(sprite, app, 0.0003, 8, 0.00003, 0.007);
+    }
+  },
+  {
+    name: 'cloud_2',
+    url: './assets/cloud_2.png',//小
+    x: 408,
+    y: 880,
+    afterFunction: (sprite) => {
+      addRandomScaleAnimate(sprite, app, 0.0006, 13, 0.0004, 0.09);
+    }
+  },
+  {
+    name: 'cloud_1',
+    url: './assets/cloud_1.png',//左边
+    x: 0,
+    y: 700,
+    afterFunction: (sprite) => {
+      addRandomScaleAnimate(sprite, app, 0.0002, 10, 0.00009, 0.05);
+    }
+  },
+  {
+    name: 'cloud_4',
+    url: './assets/cloud_4.png',//水面上中间
+    x: 524,
+    y: 893,
+    afterFunction: (sprite) => {
+      addRandomScaleAnimate(sprite, app, 0.0003, 10, 0.0003, 0.05);
+    }
+
+  },
+
 
 
 ];
@@ -101,7 +187,7 @@ PIXI.Assets.load(
       sprite.y = item.y;
       sprintList.push(sprite);
       container.addChild(sprite);
-      if(item.afterFunction){
+      if (item.afterFunction) {
         item.afterFunction(sprite);
       }
     });
@@ -119,9 +205,9 @@ export default function FirstSection() {
   }, []);
   //firstSection宽高变化时，canvas宽高也变化
   useEffect(() => {
-    sectionRef.current??app.renderer.resize(sectionRef.current.clientWidth, sectionRef.current.clientHeight);
+    sectionRef.current ?? app.renderer.resize(sectionRef.current.clientWidth, sectionRef.current.clientHeight);
   }, [sectionRef.current?.clientWidth, sectionRef.current?.clientHeight]);
-  
+
   return (
     <div ref={sectionRef} className='firstSection'></div>
   );
