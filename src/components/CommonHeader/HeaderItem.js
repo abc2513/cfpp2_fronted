@@ -11,10 +11,11 @@ export default function HeaderItem(props) {
         display: 'flex',
         minWidth: '10rem',
         backgroundColor: 'var(--secondary-color-light)',
-        height: '3rem',
+        height: '3.5rem',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: '1000rem',
+        fontSize:'1.8rem'
       }}>
         {children}
       </NavLink>

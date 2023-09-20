@@ -1,0 +1,38 @@
+.article-sider-button{
+    position: relative;
+}
+.hamburger{
+    &,&::before,&::after{
+        width: 2rem;
+        height: .1rem;
+        background-color: #fff;
+        content: '';
+        position: relative;
+    };
+    &::before,&::after{
+        transition: all .2s;
+        position: absolute;
+        left: 0;
+    };
+    &::before{
+        top: -.6rem;
+    };
+    &::after{
+        top: .6rem;
+    };
+}
+.folder-title{W
+    &:hover{
+        
+    }
+}
+.folder-header{
+    &:hover{
+        background-color: var(--secondary-color-light);
+    }
+}
+.article-sider-item{
+    &:hover{
+        background-color: var(--secondary-color-light);
+    }
+}
