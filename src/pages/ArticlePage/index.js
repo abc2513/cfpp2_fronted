@@ -6,7 +6,8 @@ export default function ArticlePage() {
     <div
       style={{
         display: 'flex',
-        flex: '1'
+        flex: '1',
+        minHeight:'calc(100vh - 5rem)'
       }}>
       <ArticleSider />
       <ArctileContent />

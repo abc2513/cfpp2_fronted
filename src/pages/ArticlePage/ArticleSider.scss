@@ -8,6 +8,7 @@
         background-color: #fff;
         content: '';
         position: relative;
+        transition: all .2s;
     };
     &::before,&::after{
         transition: all .2s;
@@ -15,11 +16,16 @@
         left: 0;
     };
     &::before{
-        top: -.6rem;
+        top: calc((1 - var(--sider-open)) * .6rem);
+        transform: rotate(calc(var(--sider-open) * 45deg)) ;
     };
     &::after{
-        top: .6rem;
+        top: calc((1 - var(--sider-open)) * -.6rem);
+        transform: rotate(calc(var(--sider-open) * -45deg))
     };
+    &{
+        height: calc((1 - var(--sider-open)) * 1px);
+    }
 }
 .folder-title{W
     &:hover{

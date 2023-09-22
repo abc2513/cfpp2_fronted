@@ -1,15 +1,53 @@
 import React from 'react';
-
+import './CommonFooter.scss';
 export default function CommonFooter() {
   return (
     <div
       style={{
-        marginTop: 'auto',
-        borderTop: '1px solid var(--line-color)',
-        backgroundImage: 'linear-gradient(to right, var(--primary-color-light), var(--secondary-color-light))',
-        display: 'flex',
-        minHeight: '5rem',
+
       }}
-    >CommonFooter</div>
+      className='CommonFooter'
+    >
+      {/* LOGO */}
+      <div className='logo'>
+        <img src="cfpp_l.png" alt="cfpp-LOGO" />
+      </div>
+      <div className='container'>
+        {/* 站内导航 */}
+        <div className='siteMap'>
+          <div className='title'>站内导航</div>
+          <div className='content'>
+            <div>首页</div>
+            <div>作品集</div>
+            <div>笔记</div>
+          </div>
+        </div>
+        {/* 关于本站 */}
+        <div className='about'>
+          <div className='title'>关于本站</div>
+          <div className='content'>
+            <div>本站是陈帆所开发的个人网站</div>
+            <div>本站的前端源码均为本人原创，转载请注明出处。</div>
+            <div className='title'>本站使用的技术栈 / 第三方库：</div>
+            <div className='list'>
+              <div>ReactJS</div>
+              <div>Redux</div>
+              <div>ReactRouter</div>
+              <div>Sass</div>
+              <div>PixiJS</div>
+              <div>PixiFilters</div>
+              <div>Marked</div>
+              <div>Axios</div>
+              <div>Eslint</div>
+            </div>
+            
+            <div className='title'>部分图片素材取自: </div>
+            <a href='https://act.mihoyo.com/ys/event/e20230916preview/index.html'>https://act.mihoyo.com/ys/event/e20230916preview/index.html</a>
+            <div>（出于非商业用途）</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   );
 }

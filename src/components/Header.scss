@@ -1,0 +1,7 @@
+.header-component{
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        transform: skewX(2deg) skewY(2deg) scale(1.4);
+    }
+    &-container{}
+}

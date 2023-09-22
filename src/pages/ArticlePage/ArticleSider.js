@@ -18,8 +18,10 @@ export default function ArticleSider() {
       style={{
         borderRight: '1px solid var(--line-color)',
         width: siderExpanded ? '25rem' : '5rem',
-        overflow: 'hidden',
+        overflowX: 'hidden',
+        overflowY: 'scroll',
         transition: 'all .6s',
+        paddingBottom:'4rem'
       }}
     >
       <div
@@ -29,6 +31,7 @@ export default function ArticleSider() {
           padding: '.5rem',
           width: '25rem',
           gap: '.5rem',
+          '--sider-open': siderExpanded ? 1 : 0,
         }}
       >
         <div

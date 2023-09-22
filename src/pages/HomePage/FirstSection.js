@@ -16,7 +16,6 @@ export default function FirstSection() {
         canvasContainerRef.current.removeChild(item);
       }
     });
-
     canvasContainerRef.current.appendChild(app.view);
   }, []);
   //不知道为啥，不加这段代码，只用css控制canvas宽高，内部的内容能正常显示

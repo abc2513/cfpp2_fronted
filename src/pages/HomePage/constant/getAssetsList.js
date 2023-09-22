@@ -73,9 +73,27 @@ export default function getAssetsList(app) {
       }
     },
     {
+      name: 'fish_group_1_2',
+      url: './assets/fish_group_1.png',
+      x: 166,
+      y: 135,
+      afterFunction: (sprite) => {
+        addRoateAnimate(sprite, app, -0.002);
+      }
+    },
+    {
       name: 'fish_group_2',
       url: './assets/fish_group_2.png',
       x: 143,
+      y: 117,
+      afterFunction: (sprite) => {
+        addRoateAnimate(sprite, app, -0.0020);
+      }
+    },
+    {
+      name: 'fish_group_2_2',
+      url: './assets/fish_group_2.png',
+      x: 150,
       y: 117,
       afterFunction: (sprite) => {
         addRoateAnimate(sprite, app, -0.0015);
@@ -88,6 +106,15 @@ export default function getAssetsList(app) {
       y: 153,
       afterFunction: (sprite) => {
         addRoateAnimate(sprite, app, -0.0019);
+      }
+    },
+    {
+      name: 'fish_group_3_2',
+      url: './assets/fish_group_3.png',
+      x: 260,
+      y: 153,
+      afterFunction: (sprite) => {
+        addRoateAnimate(sprite, app, -0.0010);
       }
     },
     {
@@ -135,13 +162,30 @@ export default function getAssetsList(app) {
     },
     {
       name: 'cloud_4',
-      url: './assets/cloud_4.png',//水面上中间
-      x: 524,
-      y: 893,
+      url: './assets/cloud_4.png',//中大
+      x: 254,
+      y: 503,
       afterFunction: (sprite) => {
         addRandomScaleAnimate(sprite, app, 0.0009, 20, 0.0003, 0.05);
       }
-
+    },
+    {
+      name: 'cloud_5',
+      url: './assets/cloud_5.png',
+      x: 300,
+      y: 700,
+      afterFunction: (sprite) => {
+        addRandomScaleAnimate(sprite, app, 0.0009, 20, 0.0003, 0.05);
+      }
+    },
+    {
+      name: 'cloud_6',
+      url: './assets/cloud_6.png',
+      x: 900,
+      y: 500,
+      afterFunction: (sprite) => {
+        addRandomScaleAnimate(sprite, app, 0.0009, 20, 0.0003, 0.05);
+      }
     },
     {
       name: 'cloudy',

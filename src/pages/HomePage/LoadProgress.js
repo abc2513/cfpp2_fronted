@@ -24,7 +24,7 @@ export default function LoadProgress(props) {
           width: `${progress * 100}%`,
           height: '100%',
           backgroundColor: '#00a1d6',
-          transition: 'width 1s',
+          transition: 'width .5s',
         }}></div>
       </div>
       <div
