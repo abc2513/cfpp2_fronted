@@ -21,6 +21,9 @@ export default function CommonFooter() {
             <div>作品集</div>
             <div>笔记</div>
           </div>
+          <div className='title'>联系方式</div>
+          <div>Email: 2513151911@qq.com</div>
+          <div>GitHub: abc2513</div>
         </div>
         {/* 关于本站 */}
         <div className='about'>

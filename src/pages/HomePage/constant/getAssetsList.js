@@ -66,8 +66,8 @@ export default function getAssetsList(app) {
     {
       name: 'fish_group_1',
       url: './assets/fish_group_1.png',
-      x: 176,
-      y: 135,
+      x: 200,
+      y: 140,
       afterFunction: (sprite) => {
         addRoateAnimate(sprite, app, -0.001);
       }
@@ -84,17 +84,17 @@ export default function getAssetsList(app) {
     {
       name: 'fish_group_2',
       url: './assets/fish_group_2.png',
-      x: 143,
+      x: 140,
       y: 117,
       afterFunction: (sprite) => {
-        addRoateAnimate(sprite, app, -0.0020);
+        addRoateAnimate(sprite, app, -0.0025);
       }
     },
     {
       name: 'fish_group_2_2',
       url: './assets/fish_group_2.png',
-      x: 150,
-      y: 117,
+      x: 160,
+      y: 130,
       afterFunction: (sprite) => {
         addRoateAnimate(sprite, app, -0.0015);
       }
@@ -114,7 +114,7 @@ export default function getAssetsList(app) {
       x: 260,
       y: 153,
       afterFunction: (sprite) => {
-        addRoateAnimate(sprite, app, -0.0010);
+        addRoateAnimate(sprite, app, -0.0017);
       }
     },
     {
@@ -123,7 +123,7 @@ export default function getAssetsList(app) {
       x: 626,
       y: 853,
       afterFunction: (sprite) => {
-        addRoateAnimate(sprite, app, -0.001);
+        addRoateAnimate(sprite, app, -0.0012);
       }
     },
 

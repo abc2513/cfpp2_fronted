@@ -1,7 +1,20 @@
 .header-component{
     transition: all 0.5s ease-in-out;
+    
     &:hover{
         transform: skewX(2deg) skewY(2deg) scale(1.4);
     }
-    &-container{}
+    &-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 8%;
+        .title-divder{
+            flex: 1;
+            height: 1px;
+            background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            margin: 0 10px;
+        }
+    }
+
 }

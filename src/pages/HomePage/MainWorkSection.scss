@@ -1,26 +1,72 @@
 .MainWorkSection{
-    min-height: 100vh;
     width: 100%;
     display: flex;
     background-color: #fff;
-    align-items: center;
+    align-items: stretch;
     flex-direction: column;
     padding: 4rem 0;
     gap:1rem;
     &-container{
-        flex:1;
         width: 100%;
         display: flex;
-        >*{
-            flex:1;
+        padding: 0 8rem;
+        align-items: start;
+        @media screen and (max-width:900px){
+            flex-direction: column;
+            padding: 0 2rem;
+            align-items: center;
         }
     }
     .textContainer{
-        background-color: #aaa;
+        // background-color: #aaa;
+        padding: 5rem 1rem 5rem 5rem;
+        flex:1;
+        // display: flex;
+        // flex-direction: column;
+        // gap:.5rem;
+        .small_title{
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding: 1rem 0 0 0;
+        }
+        ul{
+            padding-left: 2rem;
+            padding-top: .5rem;
+        }
+        @media screen and (max-width:900px){
+            padding: 2rem 2rem;
+        }
     }
     .imageContainer{
-        background-color: #bbb;
-        // box-shadow: ;
+        // background-color: #bbb;
+        flex:0 0 50vw;
+        height: 40vw;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(8,1fr);
+        padding: 5rem 0;
+        @media screen and (max-width:900px){
+            padding: 0;
+        }
+        .imgScaleContainer{
+            position: relative;
+            overflow: visible;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                transition: all .5s;
+            }
+            &:hover img{
+               outline: 1.5rem solid var(--primary-color);
+               transform: scale(1.3);
+               z-index: 20;
+               border-radius: 2rem;
+            }
+        }
     }
     
 }

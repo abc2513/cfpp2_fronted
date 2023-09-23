@@ -46,7 +46,13 @@ export default function FirstSection() {
           长风破浪会有时，直挂云帆济沧海
         </div>
         <div style={{ fontSize: '1.4rem', color: '#555' }}>
-          陈帆 Email:2513151911@qq.com WeChat:SailingNorth
+          陈帆 
+          
+          Email:******@qq.com WeChat:********
+          {/* Email:2513151911@qq.com WeChat:SailingNorth */}
+        </div>
+        <div style={{ fontSize: '1.4rem', color: '#555' }}>
+          GitHub: <a href='https://github.com/abc2513'>https://github.com/abc2513</a>
         </div>
         <LoadProgress progress={firstSectionLoadProgress} />
       </div>

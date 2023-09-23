@@ -19,7 +19,7 @@ export default function ArticleSider() {
         borderRight: '1px solid var(--line-color)',
         width: siderExpanded ? '25rem' : '5rem',
         overflowX: 'hidden',
-        overflowY: 'scroll',
+        overflowY: 'auto',
         transition: 'all .6s',
         paddingBottom:'4rem'
       }}

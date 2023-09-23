@@ -7,7 +7,7 @@
 }
 html {
     font-size: 10px;
-    @media (max-width:1200px){
+    @media (max-width:1000px){
         font-size: 9px;
         iframe{
             transform:translate(-5.55%,-5.55%) scale(0.9) ;
@@ -15,7 +15,7 @@ html {
             width: 111.11%;
         }
     }
-    @media (max-width:1000px){
+    @media (max-width:600px){
         font-size: 8px;
         iframe{
             transform:translate(-10%,-10%) scale(0.8) ;
@@ -23,15 +23,12 @@ html {
             width: 125%;
         }
     }
-    @media (max-width:600px){
+    @media (max-width:500px){
         font-size: 7px;
         iframe{
             transform:translate(-14.7%,-14.7%) scale(0.7) ;
             height: 142.86%;
             width: 142.86%;
-        }
-        .logo-img{
-            width: 18rem !important;
         }
     }
     //黑体

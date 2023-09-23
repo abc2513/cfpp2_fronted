@@ -1,14 +1,16 @@
 import React from 'react';
 import './Header.scss';
 export default function Header(props) {
-  const { children, style } = props;
+  const { children, style,boxStyle } = props;
   return (
     <div
     style={{
       dpisplay: 'flex',
       justifyContent: 'start',
+      ...boxStyle
     }}
     className='header-component-container'>
+      <div className='title-divder'></div>
       <div
         style={{
           fontSize: '3rem',
@@ -22,6 +24,7 @@ export default function Header(props) {
         }}
         className='header-component'
       >{children}</div>
+      <div className='title-divder'></div>
     </div>
   );
 }
