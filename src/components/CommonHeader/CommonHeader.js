@@ -15,8 +15,7 @@ export default function CommonHeader() {
   useEffect(() => {
     //监听屏幕宽度
     const handleResize = () => {
-      console.log(window.innerWidth);
-      if (window.innerWidth < 400) {
+      if (window.innerWidth < 370) {
         setLogoUrl('/cfpp_small.png');
       } else {
         setLogoUrl('/cfpp_l.png');
@@ -26,16 +25,17 @@ export default function CommonHeader() {
   }, []);
 
   return (
-    <div style={{
-      // backgroundImage: 'linear-gradient(to right, var(--primary-color-light), var(--secondary-color-light))',
-      backgroundColor: '#333',
-      display: 'flex',
-      height: '5rem',
-      alignItems: 'center',
-      padding: '0 2rem',
-      gap: '2rem',
-      // borderBottom:'1px solid var(--line-color)',
-    }}>
+    <div
+      id='header'
+      style={{
+        // backgroundImage: 'linear-gradient(to right, var(--primary-color-light), var(--secondary-color-light))',
+        backgroundColor: '#333',
+        display: 'flex',
+        height: '5rem',
+        alignItems: 'center',
+        padding: '0 2rem',
+        // borderBottom:'1px solid var(--line-color)',
+      }}>
       <NavLink to='/'
         style={{
           display: 'flex',

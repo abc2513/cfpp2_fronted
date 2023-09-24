@@ -1,6 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import './CommonFooter.scss';
+import { NavLink } from 'react-router-dom';
 export default function CommonFooter() {
+  const selector = (state) => {
+    return {
+      catalogue: state.catalogueStage,
+    };
+  };
+  const {
+    catalogue,
+  } = useSelector(selector);
   return (
     <div
       style={{
@@ -18,8 +28,11 @@ export default function CommonFooter() {
           <div className='title'>站内导航</div>
           <div className='content'>
             <div>首页</div>
-            <div>作品集</div>
-            <div>笔记</div>
+            {Object.keys(catalogue).map((item, index) => {
+              return <NavLink key={index} to={`/article/${item}/index`} style={{
+                display: 'block',
+              }}>{catalogue[item].title}</NavLink>;
+            })}
           </div>
           <div className='title'>联系方式</div>
           <div>Email: 2513151911@qq.com</div>
@@ -43,7 +56,7 @@ export default function CommonFooter() {
               <div>Axios</div>
               <div>Eslint</div>
             </div>
-            
+
             <div className='title'>部分图片素材取自: </div>
             <a href='https://act.mihoyo.com/ys/event/e20230916preview/index.html'>https://act.mihoyo.com/ys/event/e20230916preview/index.html</a>
             <div>（出于非商业用途）</div>

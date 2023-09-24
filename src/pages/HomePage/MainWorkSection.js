@@ -1,6 +1,7 @@
 import React from 'react';
 import './MainWorkSection.scss';
 import Header from '../../components/Header';
+import {NavLink,Link} from 'react-router-dom';
 function getImgObject(src = '', alt = '', position = [0, 0], size = [1, 1]) {
   return {
     src,
@@ -34,7 +35,7 @@ export default function MainWorkSection() {
   return (
     <div className='MainWorkSection'>
 
-      <Header line={true} style={{padding:'0 5rem'}}>个人情况</Header>
+      <Header line={true} style={{padding:'0 4rem'}}>个人情况</Header>
       <div className='MainWorkSection-container'>
         <div className='textContainer'>
           <Header style={{fontSize:'2.4rem'}}> 个人简介</Header>
@@ -45,11 +46,13 @@ export default function MainWorkSection() {
           <Header style={{fontSize:'2.4rem'}} boxStyle={{marginTop:'1.6rem'}}>项目经历</Header>
           <div className='small_title'>正式项目</div>
           <ul> <li>Weily特刊管理系统：Special Issue Management Tool，担任前端副组长</li>  </ul>
-          <div className='small_title'>习作</div>
+          <div className='small_title'>部分项目/作品</div>
           <ul>
             {baseWorkList.map(item => (<li>{item}</li>))}
           </ul>
-          <div>更多内容</div>
+          <div className='small_title'>
+            <Link to='/article/work/index'>了解更多→</Link>
+          </div>
         </div>
         <div className='imageContainer'>
           {

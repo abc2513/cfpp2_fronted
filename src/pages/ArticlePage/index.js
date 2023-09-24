@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ArticleSider from './ArticleSider';
 import ArctileContent from './ArticleContent';
 export default function ArticlePage() {
+  useEffect(() => {
+    //窗口滚动到顶部
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       style={{

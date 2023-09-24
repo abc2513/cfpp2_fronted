@@ -36,7 +36,7 @@ html {
 }
 body {
     font-size: 1.6rem;
-    
+    line-height: 1.2;
     background-color: #f5f5f5;
     //蓝色、浅蓝色主题
     --primary-color: #1890ff;
@@ -69,10 +69,8 @@ body {
 .App {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     overflow: scroll;
     
-    background-image: linear-gradient(to top, #f3ddae 0%, #d1fdff 100%);
 }
 a,
 a:visited {

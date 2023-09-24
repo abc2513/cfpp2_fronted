@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.0",
     "eslint": "^8.49.0",
+    "lodash": "^4.17.21",
     "pixi-filters": "^5.2.1",
     "pixi.js": "^7.2.4",
     "react": "^18.2.0",

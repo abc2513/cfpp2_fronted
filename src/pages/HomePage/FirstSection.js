@@ -36,20 +36,19 @@ export default function FirstSection() {
       </div>
       <div className='firstSection-container'>
         <div
-          style={{ fontSize: '3rem', }}>
+          style={{ fontSize: '2.6rem', }}>
           学
-          <span style={{ fontSize: '6rem' }}>Web</span>
+          <span style={{ fontSize: '4rem' }}>Web</span>
           前端的
-          <span style={{ fontSize: '4rem' }}>小陈</span>
+          <span style={{ fontSize: '3rem' }}>小陈</span>
         </div>
-        <div style={{}}>
+        <div style={{fontSize:'1.6rem'}}>
           长风破浪会有时，直挂云帆济沧海
         </div>
         <div style={{ fontSize: '1.4rem', color: '#555' }}>
-          陈帆 
+          陈帆 | 
           
-          Email:******@qq.com WeChat:********
-          {/* Email:2513151911@qq.com WeChat:SailingNorth */}
+          Email: 2513151911@qq.com | QQ：2513151911
         </div>
         <div style={{ fontSize: '1.4rem', color: '#555' }}>
           GitHub: <a href='https://github.com/abc2513'>https://github.com/abc2513</a>
