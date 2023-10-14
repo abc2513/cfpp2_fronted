@@ -21,14 +21,17 @@ const imgObjectList = [
   getImgObject('./picture/perlin.png', 'perlin', [5, 3], [3, 4]),
 ];
 const baseInfoList = [
-  '熟练掌握JS，熟悉ES6以上的特性并能熟练使用，熟悉JS设计模式，接触过TS',
-  '熟悉CSS3中的现代css属性，包括动画、渐变、剪裁、现代布局方式等；熟悉Sass、css模块化',
-  '熟悉React18，接触过Vue2、Webpack5，',
-  '接触过ChartJS、PixiJS、ThreeJS等第三方库',
+  '熟练掌握JS，熟悉ES6+的特性、JS设计模式；接触过TS',
+  '熟悉CSS3中的现代css属性；熟悉CSS模块化、预处理器Sass',
+  '熟悉React18；接触过Vue2、Webpack5',
+  '了解浏览器工作原理、前端性能优化、前端工程化等知识',
+  '接触过ChartJS、PixiJS、ThreeJS等前端库',
+  '了解NodeJS的基本使用，能够使用Express+MySQL开发后端服务',
+  '有敏捷开发Web项目经验，有良好的团队协作能力',
 ];
 const baseWorkList = [
   '大一：基于小熊派开发板的智能校园交通系统',
-  '大二起：雪原信息分析系统（就餐/社交推荐系统）',
+  '大二：雪原信息分析系统（就餐/社交推荐系统）',
 ];
 export default function MainWorkSection() {
   return (
