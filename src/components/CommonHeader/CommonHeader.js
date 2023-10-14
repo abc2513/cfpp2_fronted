@@ -42,7 +42,8 @@ export default function CommonHeader() {
           alignItems: 'center',
           height: '100%'
 
-        }}>
+        }}
+        target='_blank'>
         {
           logoUrl === '/cfpp_l.png' ?
             <img src='/cfpp_l.png' alt='logo'

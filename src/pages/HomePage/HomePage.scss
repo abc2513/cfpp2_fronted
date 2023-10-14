@@ -38,7 +38,7 @@
         display: flex;
         .TextContainer {
             flex: 1;
-            padding-top: 2rem;
+            padding: 2rem 0rem;
         }
         canvas {
             background-image: linear-gradient(150deg, #f3ddae 0%, #d1fdff 100%);

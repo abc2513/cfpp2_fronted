@@ -27,11 +27,8 @@ const baseInfoList = [
   '接触过ChartJS、PixiJS、ThreeJS等第三方库',
 ];
 const baseWorkList = [
-  '基于React的可复用个人网页',
-  '基于和风天气Api的简易天气网站',
-  '基于小熊派开发板的智能校园交通系统',
-  '基于Unity的2D动作游戏',
-
+  '大一：基于小熊派开发板的智能校园交通系统',
+  '大二起：雪原信息分析系统（就餐/社交推荐系统）',
 ];
 export default function MainWorkSection() {
   return (
@@ -47,15 +44,16 @@ export default function MainWorkSection() {
           </div>
           <Header style={{fontSize:'2.4rem'}} boxStyle={{marginTop:'1.6rem'}}>项目经历</Header>
           <div className='small_title'>正式项目</div>
-          <ul> <li>Weily特刊管理系统：Special Issue Management Tool，担任前端副组长</li>  </ul>
-          <div className='small_title'>部分项目/作品</div>
+          <ul> <li>大二~大三：Weily特刊管理系统。在HIT三十余人的项目团队中，担任前端副组长</li>  </ul>
+          <div className='small_title'>团队项目</div>
           <ul>
             {baseWorkList.map(item => (<li>{item}</li>))}
           </ul>
           <div className='small_title' style={{
             color:'var(--primary-color)'
           }}>
-            <Link to='/article/work/index'>前往作品集→</Link>
+            <Link to='/article/work/index'
+              target='_blank'>前往作品集→</Link>
           </div>
         </div>
         <div className='imageContainer'>

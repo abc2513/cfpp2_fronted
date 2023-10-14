@@ -31,7 +31,8 @@ export default function CommonFooter() {
             {Object.keys(catalogue).map((item, index) => {
               return <NavLink key={index} to={`/article/${item}/index`} style={{
                 display: 'block',
-              }}>{catalogue[item].title}</NavLink>;
+              }}
+              target='_blank'>{catalogue[item].title}</NavLink>;
             })}
           </div>
           <div className='title'>联系方式</div>
@@ -50,11 +51,14 @@ export default function CommonFooter() {
               <div>Redux</div>
               <div>ReactRouter</div>
               <div>Sass</div>
-              <div>PixiJS</div>
-              <div>PixiFilters</div>
               <div>Marked</div>
               <div>Axios</div>
+              <div>Yarn</div>
               <div>Eslint</div>
+              <div>PixiJS</div>
+              <div>PixiFilters</div>
+              <div>ThreeJS</div>
+              <div>lil-gui</div>
             </div>
 
             <div className='title'>部分图片素材取自: </div>
