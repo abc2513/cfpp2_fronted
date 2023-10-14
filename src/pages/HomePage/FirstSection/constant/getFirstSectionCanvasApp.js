@@ -2,7 +2,7 @@
 import * as PIXI from 'pixi.js';
 import * as filters from 'pixi-filters';
 import getAssetsList from './getAssetsList';
-import { setFirstSectionLoadProgress } from '../../../actions/userAction';
+import { setFirstSectionLoadProgress } from '../../../../actions/userAction';
 export default function getFirstSectionCanvasApp(dispatch) {
   const app = new PIXI.Application({
     width: 1440,

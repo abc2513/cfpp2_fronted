@@ -14,7 +14,7 @@ export default function LoadProgress(props) {
         transition:'opacity 2s',
       }}>
       <div style={{
-        width: '25rem',
+        width: '40vw',
         height: '.5rem',
         borderRadius: '1000rem',
         backgroundColor: '#bbb',

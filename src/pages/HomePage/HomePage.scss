@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    & > * {
+        width: 100%;
+    }
     .firstSection {
         overflow: hidden;
         position: relative;
@@ -15,7 +18,7 @@
             max-height: min(calc(100vh - 5rem), calc(100vw * 920 / 1440));
             max-width: min(100vw, calc(100vh * 1440 / 920));
         }
-        &-canvasContainer{
+        &-canvasContainer {
             background-image: linear-gradient(to right, var(--primary-color-light), var(--secondary-color));
         }
         &-container {
@@ -29,6 +32,43 @@
             gap: 0.5rem;
         }
         background-image: linear-gradient(to top, #f3ddae 0%, #d1fdff 100%);
+    }
+    .ThreeJsSection {
+        // min-height: 80vh;
+        display: flex;
+        .TextContainer {
+            flex: 1;
+            padding-top: 2rem;
+        }
+        canvas {
+            background-image: linear-gradient(150deg, #f3ddae 0%, #d1fdff 100%);
+        }
+        //大于900px
+        @media (min-width: 900px) {
+            canvas {
+                max-height: min(calc(100vh - 5rem), calc(50vw * 920 / 1440));
+                max-width: min(50vw, calc(100vh * 1440 / 920));
+                min-width: 50vw;
+                min-height: calc(50vw * 920 / 1440);
+            }
+        }
+        @media (max-width: 900px) {
+            canvas {
+                max-height: min(calc(100vh - 5rem), calc(95vw * 920 / 1440));
+                max-width: min(95vw, calc(100vh * 1440 / 920));
+                min-width: 95vw;
+                min-height: calc(95vw * 920 / 1440);
+            }
+            flex-direction: column-reverse;
+        }
+        @media (max-width: 500px) {
+            canvas {
+                max-height: min(calc(100vh - 5rem), calc(100vw * 920 / 1440));
+                max-width: min(100vw, calc(100vh * 1440 / 920));
+                min-width: 100vw;
+                min-height: calc(100vw * 920 / 1440);
+            }
+        }
     }
 }
 @keyframes moveFromTop {

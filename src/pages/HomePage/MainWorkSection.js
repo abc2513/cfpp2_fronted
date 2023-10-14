@@ -11,12 +11,14 @@ function getImgObject(src = '', alt = '', position = [0, 0], size = [1, 1]) {
   };
 }
 const imgObjectList = [
+  getImgObject('./picture/natours.png', 'natours', [4, 6], [3, 3]),
   getImgObject('./picture/weily.png', 'weily特刊管理系统', [1, 1], [3, 4]),
   getImgObject('./picture/cfpp.png', '个人网页', [3, 2], [3, 4]),
   getImgObject('./picture/文档管理.png', '文档管理系统', [2, 4], [3, 4]),
   getImgObject('./picture/开发社团.png', '游戏开发社团网站', [1, 6], [3, 3]),
   getImgObject('./picture/unity.png', 'Unity-2D游戏', [6, 5], [3, 4]),
-  getImgObject('./picture/交通系统.png', '智能交通系统', [5, 3], [3, 4]),
+  getImgObject('./picture/交通系统.png', '智能交通系统', [6, 1], [3, 3]),
+  getImgObject('./picture/perlin.png', 'perlin', [5, 3], [3, 4]),
 ];
 const baseInfoList = [
   '熟练掌握JS，熟悉ES6以上的特性并能熟练使用，熟悉JS设计模式，接触过TS',
@@ -50,8 +52,10 @@ export default function MainWorkSection() {
           <ul>
             {baseWorkList.map(item => (<li>{item}</li>))}
           </ul>
-          <div className='small_title'>
-            <Link to='/article/work/index'>了解更多→</Link>
+          <div className='small_title' style={{
+            color:'var(--primary-color)'
+          }}>
+            <Link to='/article/work/index'>前往作品集→</Link>
           </div>
         </div>
         <div className='imageContainer'>

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import LoadProgress from './LoadProgress';
+import LoadProgress from '../LoadProgress';
 import { useDispatch, useSelector } from 'react-redux';
 import getFirstSectionCanvasApp from './constant/getFirstSectionCanvasApp';
 
@@ -36,21 +36,21 @@ export default function FirstSection() {
       </div>
       <div className='firstSection-container'>
         <div
-          style={{ fontSize: '2.6rem', }}>
+          style={{ fontSize: '2.8rem', }}>
           学
-          <span style={{ fontSize: '4rem' }}>Web</span>
+          <span style={{ fontSize: '5rem' }}>Web</span>
           前端的
-          <span style={{ fontSize: '3rem' }}>小陈</span>
+          <span style={{ fontSize: '3.2rem' }}>小陈</span>
         </div>
-        <div style={{fontSize:'1.6rem'}}>
+        <div style={{fontSize:'2rem'}}>
           长风破浪会有时，直挂云帆济沧海
         </div>
-        <div style={{ fontSize: '1.4rem', color: '#555' }}>
+        <div style={{ fontSize: '1.6rem', color: '#555' }}>
           陈帆 | 
           
           Email: 2513151911@qq.com | QQ：2513151911
         </div>
-        <div style={{ fontSize: '1.4rem', color: '#555' }}>
+        <div style={{ fontSize: '1.6rem', color: '#555' }}>
           GitHub: <a href='https://github.com/abc2513'>https://github.com/abc2513</a>
         </div>
         <LoadProgress progress={firstSectionLoadProgress} />

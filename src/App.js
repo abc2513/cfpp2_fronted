@@ -1,6 +1,7 @@
 
 import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
+// import './components/Buttons/PrimaryButtons.scss';
 import IndexRoute from './routes';
 import CommonHeader from './components/CommonHeader/CommonHeader';
 import CommonFooter from './components/CommonFooter';
