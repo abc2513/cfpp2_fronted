@@ -1,5 +1,5 @@
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import './App.scss';
 // import './components/Buttons/PrimaryButtons.scss';
 import IndexRoute from './routes';
@@ -10,17 +10,19 @@ import { useDispatch } from 'react-redux';
 import { getConfig } from './actions/catalogueAction';
 
 function App() {
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getConfig());
-  },[]);
+  }, []);
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
+      <HashRouter>
         <CommonHeader />
         <IndexRoute />
         <CommonFooter />
-      </BrowserRouter>
+      </HashRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
