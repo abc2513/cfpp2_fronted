@@ -17,7 +17,7 @@ export default function ArticleSider() {
     <div
       style={{
         borderRight: '1px solid var(--line-color)',
-        width: siderExpanded ? '25rem' : '5rem',
+        width: siderExpanded ? '27rem' : '5rem',
         overflowX: 'hidden',
         overflowY: 'auto',
         transition: 'all .6s',
@@ -29,7 +29,7 @@ export default function ArticleSider() {
           display: 'flex',
           flexDirection: 'column',
           padding: '.5rem',
-          width: '25rem',
+          width: '27rem',
           gap: '.5rem',
           '--sider-open': siderExpanded ? 1 : 0,
         }}
@@ -50,7 +50,7 @@ export default function ArticleSider() {
               transition: 'all .6s',
               alignItems: 'center',
               gap: '1.5rem',
-              width: '24rem',
+              width: '26rem',
               
             }}>
             <button onClick={() => { setSiderExpanded(!siderExpanded); }}
