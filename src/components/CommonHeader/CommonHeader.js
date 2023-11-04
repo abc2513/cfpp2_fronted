@@ -43,7 +43,8 @@ export default function CommonHeader() {
           height: '100%'
 
         }}
-        target='_blank'>
+      // target='_blank'
+      >
         {
           logoUrl === '/cfpp_l.png' ?
             <img src='/cfpp_l.png' alt='logo'

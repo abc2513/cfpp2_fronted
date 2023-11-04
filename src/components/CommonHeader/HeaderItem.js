@@ -8,7 +8,7 @@ export default function HeaderItem(props) {
   } = props;
   return (
     <NavLink to={to}  className='HeaderItem'
-    target='_blank'
+    // target='_blank'
     >
       {children}
     </NavLink>
