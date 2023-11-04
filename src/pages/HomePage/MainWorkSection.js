@@ -47,7 +47,7 @@ export default function MainWorkSection() {
           </div>
           <Header style={{fontSize:'2.4rem'}} boxStyle={{marginTop:'1.6rem'}}>项目经历</Header>
           <div className='small_title'>正式项目</div>
-          <ul> <li>大二~大三：Weily特刊管理系统。在HIT三十余人的项目团队中，担任前端副组长</li>  </ul>
+          <ul> <li>大二~大三：Weily特刊管理系统。在HIT三十余人（前端十余人）的项目团队中，担任前端副组长</li>  </ul>
           <div className='small_title'>团队项目</div>
           <ul>
             {baseWorkList.map(item => (<li>{item}</li>))}
